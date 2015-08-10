@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<!--
+    # Path: ATOM education website\dayToStay.html 
+	# dayToStay.html by Nedim Basic 
+	# This is web file to calculate how many days you stay in KSA
+	# Copyright® 2015 Nedim Basic
+-->	
+<html lang="en"><meta charset="utf-8">
+<head>
+<meta http-equiv="KEYWORDS" content="Top of Tower, ToT, Days to Stay, Media Walls, CPLS, External Lights">
+
+<!-- Adding a favicon image to web page on computer device browser -->
+<link rel="SHORTCUT ICON" type="image/png" href="images/favicon.png"/>
+
+<!-- Adding a favicon image to web page on computer device browser if we use base64 encoding version -->
+<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABnRSTlMAAAAAAABupgeRAAAACXBIWXMAAAYnAAAGJwFNVNjHAAABW0lEQVR42o2RPU8CQRCGZ3b39o6PI/EsjEBhxJhggZEGC6nQzq9fwG/w56ktQRujhZFgsDWx4zCGO/fYHQsgcndoeLPF7mSf983MIMTllbeL1QNjNKTEuBh0b5LV+kWbSxsQ02ettFU5bIkEgIzrSAFROiH6DrglBSJKKRlj0yoHk8lkFgGttVLq17FcKtdq+zT/wS0JiIvGOlIjf9jr9SaWXazWhe04URTd3Xe11gDQaF9t1hqLAKnQeX3Iu+7jSx8ABAAQURiGU4CYhU4u1pWTk9XG5H2QzWYBgMEqQgQARFwC0LINxLaReH/0n4jM8hjGiUxyD2+d6+DT321duusbyBgRARGFXwBQ3Ks/d26hUtk5bp1wzlN+jHHBGEfGcvn82em553mzKS0VGUNg5neK94CrDGkmMfJ9W9rNo6Yx9BcghFBKjcfjmXnBLbiu+08CEQ39YRAEAPADtiaBn4S37XMAAAAASUVORK5CYII=" link="icon" type="image/png"/>
+
+<!-- Adding a Favicon to Atom iOS and Android device Website --> 
+<link rel="apple-touch-icon-precomposed" href="images/atom-logo-152.png" />
+<link rel="apple-touch-icon"
+	  sizes="144x144"
+	  href="images/atom-logo-144.png" />
+<link rel="apple-touch-icon"
+	  sizes="120x120"
+	  href="images/atom-logo-120.png" />
+<link rel="apple-touch-icon"
+	  sizes="72x72"
+	  href="images/atom-logo-72.png" />
+<link rel="apple-touch-icon"
+	  sizes="57x57"
+	  href="images/atom-logo-57.png" />
+<link rel="apple-touch-icon"
+	  sizes="32x32"
+	  href="images/atom-logo-32.png" /> 
+	  
+<!-- Adding a IE 10 Metro Tile Icon Favicon  -->	  
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-TileImage" content="images/atom-logo-144.png">
+<title>Top of Tower | day to stay at KSA</title>
+
+<script type="text/javascript">
+            var imgObj = null;
+            var animate;
+            function init(){
+               imgObj = document.getElementById('topOfTower');
+               imgObj.style.position= 'absolute'; 
+               imgObj.style.left = '400px'; 
+			   imgObj.style.top = '0px'; 
+			   imgObj.style.zIndex = '-1';
+			   }
+            function moveRight(){
+               imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+               animate = setTimeout(moveRight,25); // call moveRight in 25msec
+					if (imgObj.style.left=='800px'){
+						clearTimeout(animate);
+						imgObj.style.left = '400px'; 
+				}
+			}
+            window.onload =init;
+  </script>
+  <style>
+	div
+      {
+	    width: 40%;
+        margin: auto;
+		text-shadow: 4px 4px 8px #1133ff;
+      }
+   </style>
+
+   </head>
+   
+   <body>
+      <div>
+      <form>
+         <img id="topOfTower" src="images/topOfTower.gif" />
+         <p>Click the buttons below to calculate how many days you stay in KSA</p>
+		 Start date:<input type="text" id="startDate" value="start date"/>
+		 End date:<input type="text" id="endDate" value="end date"/><br/><br/><br/>
+         <input type="button" value="Calculate" onclick="moveRight();" /> 
+      </form>
+	  <div>
+   </body>
+</html>
